@@ -415,7 +415,7 @@ Request.prototype.init = function (options) {
     self.rejectUnauthorized = false
   }
 
-  if(!self.hasOwnProperty('proxy')) {
+  if(!self.hasOwnProperty('proxy') && self.proxy !== false) {
     self.proxy = getProxyFromURI(self.uri)
   }
 
